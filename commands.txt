@@ -1,0 +1,1 @@
+cd dartser_flutter && flutter run --target lib/main_development.dart -d chrome

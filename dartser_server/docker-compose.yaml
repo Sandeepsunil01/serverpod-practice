@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  postgres:
+    image: postgres:14.1
+    ports:
+      - '8090:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: dartser
+      POSTGRES_PASSWORD: "4M0y9wFouK5yqXjOEvadeNKUsgk--T_y"
+    volumes:
+      - dartser_data:/var/lib/postgresql/data
+  redis:
+    image: redis:6.2.6
+    ports:
+      - '8091:6379'
+    command: redis-server --requirepass "3dWH5b5PA0dFkYaGRVFpz8iv7Jhg-bxV"
+    environment:
+      - REDIS_REPLICATION_MODE=master
+volumes:
+  dartser_data:
