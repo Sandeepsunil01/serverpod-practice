@@ -1,1 +1,9 @@
+# To Run Flutter Web for chrome
 cd dartser_flutter && flutter run --target lib/main_development.dart -d chrome
+
+# Serverpod Make Migration
+cd dartser_server && serverpod make migration
+
+# Serverpod generate code
+cd dartser_server && serverpod generate
+
